@@ -1,0 +1,179 @@
+.lista-navegacion {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+/* Aplicando mobile first desde un inicio */
+#galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+/* medida tablet */
+@media (min-width: 768px) {
+    #galeria {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* medida monitores grandes */
+@media (min-width: 1024px) {
+    #galeria {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Medida monitores mas grandes */
+@media (min-width: 1200px) {
+    #galeria {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Aplicando desktop first */
+#cards-flex {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 40px;
+}
+
+img {
+    height: 200px;
+}
+
+.card1-flex {
+    width: 50%;
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 1023px){
+    #cards-flex {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    #cards-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* GRADIENTES */
+#gradientes {
+    height: 500px;
+    background-image: radial-gradient(red 5%, yellow 15%, green 60%);
+    margin: 100px 0;
+}
+
+.transformaciones {
+    /* height: 200px;
+    width: 200px;
+    background-color: black;
+    margin: 0 auto; */
+
+    /* Ejemplo de transform */
+    /* transform: translate(10px, 20px); */
+
+    /* ejemplo de rotate */
+    /* transform: rotate(40deg); */
+
+    /* ejemplo de scale */
+    /* transform: scale(2,1);*/
+
+    /* EJEMPLO DE SKEW */
+    /* transform: skew(40deg, 20deg);
+     */
+
+     width: 100px;
+     height: 100px;
+     background-color: rgba(49, 6, 6, 0.3);
+     transform: skewY(25deg)
+}
+
+/* img:hover {
+    transform: scale(2, 5);
+} */
+
+.lista-navegacion li {
+    height: 100px;
+    transition: ease 2s;
+}
+
+.lista-navegacion li:hover {
+  background-color: red;
+}
+
+input {
+    width: 100px; 
+    height: 100px;
+    transition: all 2s;       
+ }
+
+ input:focus {
+    width: 200px;
+    font-size: 24px;
+ }
+
+ .transformaciones2 {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255,0,0,0.9);
+    border: solid 1px;
+ }
+
+ .transformaciones2:hover {
+    padding: 20px;
+    transform: skewY(25deg);
+ }
+
+ @keyframes un_efecto {
+    0%{ width: 100px; }
+    10% {width: 200px;}
+    20% {width: 150px;}
+    25%{ width: 300px; }
+    50%{ 
+        width: 200px;
+        background-color: red; 
+}
+    75%{ width: 300px;}
+    100%{ 
+        width: 100px;
+        background-color:green;}
+ }
+
+
+ #animaciones {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    animation-name: un_efecto;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+
+ }
+
+ /* @keyframes aparecer {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+ }
+
+ h1 {
+    animation-name: aparecer;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+ } */
+ 
+ 
+
+ 
